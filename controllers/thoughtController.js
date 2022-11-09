@@ -6,10 +6,10 @@ module.exports = {
           .then((thoughts) => res.json(thoughts))
           .catch ((err)=>res.status(500).json(err));
     },
-    // getSingleThought,
-    // createThought,
-    // updateThought,
-    // removeThought,
-    // addReaction,
-    // removeReaction,
+    getSingleThought(req,res){},
+    createThought(req,res){},
+    updateThought(req,res){},
+    removeThought(req,res){},
+    addReaction(req,res){},
+    removeReaction(req,res){}
 };
