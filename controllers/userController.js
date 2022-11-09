@@ -43,5 +43,5 @@ addFriends(req,res){
   .catch((err)=>res.status(500).json(err));
 },
 removeFriends(req,res){},
-removeThought(req,res){}
+removeThought(req,res){} // this will probably happen under delete user
 };
