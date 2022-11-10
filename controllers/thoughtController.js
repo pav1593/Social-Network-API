@@ -34,12 +34,13 @@ module.exports = {
             !user
                 ? res
                     .status(404)
-                    .json({message: 'Post created, but found no user with that ID'})
-                : res.json('Created the post')
+                    .json({message: 'Thought created, but found no user with that ID'})
+                : res.json('Created the though for user')
             )
         .catch((err)=> res.status(500).json(err));
         
     },
+    // update a thought given a thoughtId
     updateThought(req,res){
         Thought.findByIdAndUpdate(
             {_id:req.params.thoughtId},
@@ -56,11 +57,12 @@ module.exports = {
           .catch((err)=>res.status(500).json(err));
     },
 
+    //removes a thought given a thoughtId
     removeThought(req,res){
         Thought.findOneAndDelete({_id:req.params.thoughtId})
          .then((thought)=>
            !thought
-             ? res.status(404).json({message:'No thought by that ID'})
+             ? res.status(404).json({message:'No thought found with that ID'})
              : res.json(thought)
          )
          .catch((err)=>res.status(500).json(err));
@@ -85,14 +87,14 @@ module.exports = {
     // remove a reaction given thoughtId and reactionId
     removeReaction(req,res){
         Thought.findOneAndUpdate(
-            {_id:req.params.thoguhtId},
+            {_id:req.params.thoughtId},
             {$pull: {reactions: {reactionId: req.params.reactionId}}},
             {runValidators: true,new:true}
           )
-          .then((user)=>
-            !user
-              ? res.status(404).json({message:'No user found with that ID'})
-              : res.json(user)
+          .then((thought)=>
+            !thought
+              ? res.status(404).json({message:'No thought found with that ID'})
+              : res.json(thought)
           )
           .catch((err)=>res.status(500).json(err));
     }

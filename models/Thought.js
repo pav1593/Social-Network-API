@@ -29,6 +29,7 @@ const thoughtSchema = new Schema({
     }
 );
 
+// virtual returns the count of reactions attached to thought
 thoughtSchema
 .virtual('reactionCount')
 .get(function () {

@@ -57,6 +57,7 @@ removeUser(req,res){
     .catch((err)=> res.status(500).json(err));
 },
 
+// adds friends given a userId and friendId
 addFriends(req,res){
   User.findOneAndUpdate(
     {_id:req.params.userId},
@@ -73,7 +74,7 @@ addFriends(req,res){
   .catch((err)=>res.status(500).json(err));
 },
 
-// remove friends given userId and friendId
+// removes a friend given userId and friendId
 removeFriends(req,res){
   User.findOneAndUpdate(
     {_id:req.params.userId},
