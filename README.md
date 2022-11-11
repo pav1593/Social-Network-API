@@ -58,7 +58,7 @@ The following animation shows the POST and DELETE routes for a user’s friend l
 
 ![Demo that shows the POST and DELETE routes for a user’s friend list being tested in Insomnia.](./Assets/18-nosql-homework-demo-04.gif)
 
-A walktrough video can alos be found in [Deployment](Deployment)
+A walktrough video can alos be found in [Deployment](#deployment)
 
 
 Use the following guidelines to set up your models and API routes:
