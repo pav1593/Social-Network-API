@@ -207,4 +207,4 @@ A virtual called `reactionCount` that retrieves the length of the thought's `rea
 
 1. Github Repository: https://github.com/pav1593/Social-Network-API
 
-2. Walkthrough VIDEO: 
+2. Walkthrough VIDEO: https://drive.google.com/file/d/1f5SqqF6kmS2zXx0d-fYZlyw3zbi4JFXa/view
